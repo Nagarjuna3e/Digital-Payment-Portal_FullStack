@@ -42,7 +42,7 @@ public class PaymentService {
                     savedPayment.setStatus("SUCCESS");
                     paymentDao.initiatePayment(savedPayment); 
                     System.out.println("Payment successful for dealer ID: " + savedPayment.getDealerId());
-                } catch (InterruptedException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
